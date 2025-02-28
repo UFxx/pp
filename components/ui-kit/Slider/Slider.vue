@@ -59,6 +59,7 @@ export default {
 			windowWidth: window.innerWidth,
 			sliderOffset: 0,
 			slideWidth: 0,
+			visibleSlides: 0,
 		};
 	},
 	created()
@@ -68,6 +69,7 @@ export default {
 	mounted()
 	{
 		this.slideWidth = this.$refs.slider.children[1].clientWidth;
+		this.visibleSlides = Math.round(this.$refs.slider.clientWidth / this.slideWidth);
 	},
 	unmounted()
 	{
@@ -84,10 +86,9 @@ export default {
 		},
 		decrementSliderOffset()
 		{
-			const visibleSlides = Math.round(this.$refs.slider.clientWidth / this.slideWidth);
-			const maxOffset = (this.slidesLength - visibleSlides + 1) * this.slideWidth;
+			const maxOffset = this.slideWidth * (this.slidesLength - this.visibleSlides);
 
-			if (this.sliderOffset <= -maxOffset)
+			if (-this.sliderOffset >= maxOffset)
 			{
 				return;
 			}
@@ -96,6 +97,8 @@ export default {
 		setWindowWidth()
 		{
 			this.windowWidth = window.innerWidth;
+			this.slideWidth = this.$refs.slider.children[1].clientWidth;
+			this.visibleSlides = Math.round(this.$refs.slider.clientWidth / this.slideWidth);
 		},
 	},
 };
