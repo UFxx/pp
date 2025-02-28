@@ -172,7 +172,7 @@ export default {
       @media (max-width: $mobile) {
         order: -1;
         padding-bottom: 20px;
-        border-bottom: 1px solid #1C294D26;
+        border-bottom: 1px solid $border-color;
         justify-content: center;
       }
 

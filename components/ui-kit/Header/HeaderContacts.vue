@@ -107,7 +107,7 @@ export default {
 			justify-content: center;
 			column-gap: 6.67px;
 			font-size: 14px;
-			color: #1C294DCC;
+			color: $text-alpha-80;
 		}
 
 		&__contacts {

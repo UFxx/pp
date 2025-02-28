@@ -84,7 +84,7 @@ export default {
 
 	& .action__item:last-child {
 		background-color: #FFD8EF;
-		color: #1C294DCC;
+		color: $text-alpha-80;
 
 		p {
 			width: 162px;

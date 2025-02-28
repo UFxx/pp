@@ -1,12 +1,16 @@
 <template>
-	<div class="benefit__container">
+	<div class="benefit-container">
 		<img
 			:src="benefit.image"
 			:alt="benefit.title"
 		>
-		<div class="benefit__container-content">
-			<p>{{ benefit.title }}</p>
-			<p>{{ benefit.description }}</p>
+		<div class="benefit__info">
+			<p class="benefit__info__title">
+				{{ benefit.title }}
+			</p>
+			<p class="benefit__info__description">
+				{{ benefit.description }}
+			</p>
 		</div>
 	</div>
 </template>
@@ -33,7 +37,7 @@ export default {
 </script>
 
 <style lang='scss'>
-.benefit__container {
+.benefit-container {
   display: flex;
   align-items: center;
   padding: 35px 20px;
@@ -62,34 +66,34 @@ export default {
     }
   }
 
-  &-content {
+  .benefit__info {
     p {
-      width: 153px;
+      width: 160px;
       margin-left: -20px;
 
       @media (max-width: $mobile) {
         margin-left: -10px;
-        margin-top: -18px;
         line-height: 20px;
         width: 220px;
         font-size: 14px !important;
       }
+    }
 
-      &:first-child {
-        font-size: 16px;
-        font-weight: 700;
-        width: 200px;
+    &__title {
+      font-size: 16px;
+      font-weight: 700;
+      width: 200px;
 
-        @media (max-width: $mobile) {
-          letter-spacing: 1px;
-        }
+      @media (max-width: $mobile) {
+        letter-spacing: 1px;
+        margin-top: -16px;
       }
+    }
 
-      &:last-child {
-        margin-top: 5px;
-        font-size: 12px;
-        color: #727272;
-      }
+    &__description {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #727272;
     }
   }
 }

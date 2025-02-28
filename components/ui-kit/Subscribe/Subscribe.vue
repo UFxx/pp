@@ -1,12 +1,19 @@
 <template>
 	<div class="subscribe-container">
-		<p>Скидка <span>200 ₽</span> при подписке на рассылку Издательства</p>
-		<div>
+		<p class="subscribe__text">
+			Скидка <span>200 ₽</span> при подписке на рассылку Издательства
+		</p>
+		<div class="subscribe__wrapper">
 			<input
+				class="subscribe__input"
 				type="email"
 				placeholder="Введите ваш Email"
 			>
-			<button>Подписаться</button>
+			<button
+				class="subscribe__button"
+			>
+				Подписаться
+			</button>
 		</div>
 	</div>
 </template>
@@ -32,15 +39,10 @@
 		align-items: stretch;
 	}
 
-	p {
+	.subscribe__text {
 		font-size: 18px;
 		font-weight: 500;
 		z-index: 1;
-
-		@media (max-width: $mobile) {
-			line-height: 25px;
-			width: 250px;
-		}
 
 		span {
 			position: relative;
@@ -59,9 +61,14 @@
 				z-index: -1;
 			}
 		}
+
+		@media (max-width: $mobile) {
+			line-height: 25px;
+			width: 250px;
+		}
 	}
 
-	div {
+	.subscribe__wrapper {
 		display: flex;
 		column-gap: 10px;
 
@@ -72,30 +79,30 @@
 			width: 100%;
 		}
 
-		button,
-		input {
+		.subscribe__button,
+		.subscribe__input {
 			font-size: 14px;
 			border-radius: 5px;
 		}
 
-		input {
+		.subscribe__input {
 			width: 418px;
 			background-color: white;
-			color: #1C294D80;
+			color: $text-alpha-80;
 			padding: 10px 0 10px 15px;
 			margin-left: 15px;
+
+			&::placeholder {
+				color: $text-alpha-80;
+			}
 
 			@media (max-width: $mobile) {
 				width: 100%;
 				margin-left: 0;
 			}
-
-			&::placeholder {
-				color: #1C294D80;
-			}
 		}
 
-		button {
+		.subscribe__button {
 			padding: 10px 25px;
 			border: 1px solid white;
 			font-weight: 500;

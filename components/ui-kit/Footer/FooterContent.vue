@@ -176,7 +176,7 @@
 
     &__title {
       font-weight: 500;
-      color: #1C294D;
+      color: $text-main;
 
 			@media (max-width: $mobile) {
 				position: relative;
@@ -249,7 +249,7 @@
 				a {
 					font-size: 14px;
 					line-height: 20px;
-					color: #1C294D80;
+					color: $text-alpha-50;
 					padding: 10px 20px;
 
 					&:last-child {

@@ -110,7 +110,7 @@ export default {
 		display: flex;
 		justify-content: space-between;
 		padding: 15px 25px;
-		border-bottom: 1px solid #1c294d26;
+		border-bottom: 1px solid $border-color;
 
 		h3 {
 			font-size: 20px;
@@ -126,7 +126,7 @@ export default {
 
 	&-buttons {
 		display: flex;
-		border: 1px solid #1c294d26;
+		border: 1px solid $border-color;
 		border-radius: 5px;
 		overflow: hidden;
 
@@ -146,7 +146,7 @@ export default {
 		}
 
 		.slider-button__container:first-child {
-			border-right: 1px solid #1c294d26;
+			border-right: 1px solid $border-color;
 
 			img {
 				transform: rotateY(-180deg);
@@ -170,7 +170,7 @@ export default {
 		font-size: 14px;
 		font-weight: 500;
 		border-radius: 0 0 5px 5px;
-		border-top: 1px solid #1c294d26;
+		border-top: 1px solid $border-color;
 	}
 }
 </style>

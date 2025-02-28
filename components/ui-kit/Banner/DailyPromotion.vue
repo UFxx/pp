@@ -88,7 +88,7 @@ export default {
     &__time {
       font-size: 12px;
       padding: 5px 10px;
-      color: #FF7A00;
+      color: $button-bg;
       background-color: #FF7A0026;
       border-radius: 5px;
     }
@@ -121,7 +121,7 @@ export default {
     .daily-promotion__description {
       &__category {
         font-size: 12px;
-        color: #1C294D80;
+        color: $text-alpha-50;
       }
 
       &__name {
@@ -151,7 +151,7 @@ export default {
       display: flex;
       align-items: center;
       column-gap: 11px;
-      border: 1px solid #EEEEEE;
+      border: 1px solid $border-color;
       border-radius: 5px;
 
       &:hover {

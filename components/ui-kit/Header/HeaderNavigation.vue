@@ -151,7 +151,7 @@ export default {
 	@media (max-width: $mobile) {
 		padding: 13px 10px 15px 15px;
 		align-items: center;
-		border-bottom: 2px solid #ECECEC;
+		border-bottom: 2px solid $border-color;
 
 		.header-navigation__logo {
 			a {
@@ -200,7 +200,7 @@ export default {
 
 		&-input {
 			padding: 10px 0 10px 15px;
-			border: 1px solid #DFE0E1;
+			border: 1px solid $border-color;
 			border-radius: 5px 0 0 5px;
 			line-height: 20px;
 			width: 450px;
@@ -208,7 +208,7 @@ export default {
 			border-right: none;
 
 			&::placeholder {
-				color: #1C294D80;
+				color: $text-alpha-50;
 			}
 
 			@media (max-width: $mobile) {
@@ -223,7 +223,7 @@ export default {
 
 		&-button {
 			padding: 10px 25px;
-			background-color: #FF7A00;
+			background-color: $button-bg;
 			border-radius: 0 5px 5px 0;
 			height: 40px;
 			color: white;
@@ -235,7 +235,7 @@ export default {
 			width: 123px;
 
 			&:hover {
-				background-color: #ef7604;
+				background-color: $button-bg-hover;
 			}
 
 			@media (max-width: $mobile) {
@@ -296,12 +296,12 @@ export default {
 				a {
 					display: flex;
 					column-gap: 6.67px;
-					color: #1C294D;
+					color: $text-main;
 					line-height: 20px;
 
 					span:first-of-type {
 						position: absolute;
-						background-color: #FF7A00;
+						background-color: $button-bg;
 						border-radius: 100%;
 						color: white;
 						padding: 2px;
@@ -343,7 +343,7 @@ export default {
 		display: flex;
 		line-height: 20px;
 		column-gap: 6.67px;
-		color: #1C294D;
+		color: $text-main;
 	}
 }
 </style>

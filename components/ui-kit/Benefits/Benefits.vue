@@ -1,5 +1,5 @@
 <template>
-	<div class="benefits__container">
+	<div class="benefits-container">
 		<Benefit
 			v-for="benefit in benefits"
 			:key="benefit.id"
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang='scss'>
-.benefits__container {
+.benefits-container {
 	display: flex;
 	column-gap: 30px;
 	margin-bottom: 33px;

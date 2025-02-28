@@ -1,24 +1,30 @@
 <template>
 	<div class="product-card">
-		<div class="  product-card__content">
-			<div class="item-badges__container">
+		<div class="  product-card-content">
+			<div class="badges-container">
 				<div
 					v-if="product.isBestseller"
-					class="item-badges__container__item item-badge__bestseller"
+					class="badges-container__item item-badge__bestseller"
 				>
-					<p>Бестселлер</p>
+					<p class="badges-container__item__text">
+						Бестселлер
+					</p>
 				</div>
 				<div
 					v-if="product.isNovelty"
-					class="item-badges__container__item item-badge__novelty"
+					class="badges-container__item item-badge__novelty"
 				>
-					<p>Новинка</p>
+					<p class="badges-container__item__text">
+						Новинка
+					</p>
 				</div>
 				<div
 					v-if="product.isAction"
-					class="item-badges__container__item item-badge__action"
+					class="badges-container__item item-badge__action"
 				>
-					<p>1+1=3</p>
+					<p class="badges-container__item__text">
+						1+1=3
+					</p>
 				</div>
 			</div>
 			<div class="item-image">
@@ -29,7 +35,7 @@
 					>
 				</a>
 			</div>
-			<div class="item-description__container">
+			<div class="item-description-container">
 				<a
 					href="#"
 					class="item-description__category"
@@ -147,14 +153,14 @@ export default {
   .product-card {
     position: relative;
     padding: 0 13px 0 15px;
-    border-right: 1px solid #1c294d26;
+    border-right: 1px solid $border-color;
 
     @media (max-width: $mobile) {
       padding: 0;
       padding-bottom: 14px;
     }
 
-    &__content {
+    &-content {
       height: 460px;
       width: 263px;
       padding: 25px 20px;
@@ -174,7 +180,7 @@ export default {
         }
       }
 
-      .item-badges__container {
+      .badges-container {
         position: absolute;
         top: 18px;
         display: inline;
@@ -194,7 +200,7 @@ export default {
             margin: 0;
           }
 
-          p {
+          &__text {
             font-size: 12px;
             font-weight: 500;
             line-height: 15px;
@@ -220,7 +226,7 @@ export default {
         }
       }
 
-      .item-description__container {
+      .item-description-container {
         margin-top: 14px;
         display: flex;
         flex-direction: column;
@@ -232,13 +238,13 @@ export default {
         }
 
         p {
-          color: #1c294d;
+          color: $text-main;
         }
 
         .item-description {
           &__category {
             font-size: 12px;
-            color: #1c294d80;
+            color: $text-alpha-50;
           }
 
           &__name {
@@ -282,7 +288,7 @@ export default {
 
             p:first-child {
               position: relative;
-              color: #1C294D80;
+              color: $text-alpha-50;
 
               &::before {
                 position: absolute;
@@ -389,14 +395,14 @@ export default {
     &__item {
       button {
         padding: 11px 24px;
-        border: 1px solid #eeeeee;
+        border: 1px solid $border-color;
         border-radius: 5px;
         display: flex;
         align-items: center;
         column-gap: 11.67px;
         font-size: 14px;
         font-weight: 500;
-        color: black;
+        color: $text-main;
         line-height: 15px;
 
         &:hover {
