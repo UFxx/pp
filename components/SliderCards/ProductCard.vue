@@ -93,20 +93,10 @@
 			</div>
 			<div class="item-buttons__container">
 				<div class="item-buttons__container__item">
-					<button>
-						<img
-							src="/images/Main/add-to-cart.svg"
-							alt=""
-						>В корзину
-					</button>
+					<InCartButton />
 				</div>
 				<div class="item-buttons__container__item">
-					<button>
-						<img
-							src="/images/Header/bookmark.svg"
-							alt=""
-						>
-					</button>
+					<BookmarkButton />
 				</div>
 			</div>
 		</div>
@@ -114,7 +104,11 @@
 </template>
 
 <script>
+import InCartButton from '../ui-kit/Buttons/InCartButton.vue';
+import BookmarkButton from '../ui-kit/Buttons/BookmarkButton.vue';
+
 export default {
+	components: { InCartButton, BookmarkButton },
 	props: {
 		product: {
 			type: {
@@ -252,6 +246,7 @@ export default {
             font-size: 14px;
             display: -webkit-box;
             -webkit-box-orient: vertical;
+            line-clamp: 2;
             -webkit-line-clamp: 2;
             text-overflow: ellipsis;
             overflow: hidden;
@@ -261,6 +256,7 @@ export default {
             @media (max-width: $mobile) {
               display: -webkit-box;
               -webkit-box-orient: vertical;
+              line-clamp: 3;
               -webkit-line-clamp: 3;
               text-overflow: ellipsis;
               overflow: hidden;

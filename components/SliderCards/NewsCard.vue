@@ -83,6 +83,7 @@ export default {
 			margin-top: 2px;
 			display: -webkit-box;
 			-webkit-box-orient: vertical;
+			line-clamp: 2;
 			-webkit-line-clamp: 2;
 			text-overflow: ellipsis;
 			overflow: hidden;
@@ -98,6 +99,7 @@ export default {
 			line-height: 20px;
 			display: -webkit-box;
 			-webkit-box-orient: vertical;
+			line-clamp: 3;
 			-webkit-line-clamp: 3;
 			text-overflow: ellipsis;
 			overflow: hidden;

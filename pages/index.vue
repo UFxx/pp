@@ -1,10 +1,10 @@
 <script setup>
-import ProductCard from '~/components/ui-kit/Slider/ProductCard.vue';
-import NewsCard from '~/components/ui-kit/Slider/NewsCard.vue';
-import Banner from '~/components/ui-kit/Banner/Banner.vue';
-import Slider from '~/components/ui-kit/Slider/Slider.vue';
-import Subscribe from '~/components/ui-kit/Subscribe/Subscribe.vue';
-import Benefits from '~/components/ui-kit/Benefits/Benefits.vue';
+import ProductCard from '~/components/SliderCards/ProductCard.vue';
+import NewsCard from '~/components/SliderCards/NewsCard.vue';
+import Banner from '~/components/Banner/Banner.vue';
+import Slider from '~/composables/useSlider.vue';
+import Subscribe from '~/components/Subscribe/Subscribe.vue';
+import Benefits from '~/components/Benefits/Benefits.vue';
 </script>
 
 <template>
@@ -157,22 +157,7 @@ export default {
 					description: '18 июня в «Клубе цивилистов» пройдет бесплатный онлайн-семинар по проблематике судебного прецедента. Мероприятие приуроченное',
 				},
 			],
-			windowWidth: window.innerWidth,
 		};
-	},
-	created()
-	{
-		window.addEventListener('resize', this.myEventHandler);
-	},
-	unmounted()
-	{
-		window.removeEventListener('resize', this.myEventHandler);
-	},
-	methods: {
-		myEventHandler()
-		{
-			this.windowWidth = window.innerWidth;
-		},
 	},
 };
 </script>

@@ -31,24 +31,22 @@
 			</p>
 		</div>
 		<div class="daily-promotion__buttons-container">
-			<button id="in-cart">
-				<img
-					src="/images/Main/add-to-cart.svg"
-					alt="Кнопка в корзину"
-				>В корзину
-			</button>
-			<button id="in-bookmarks">
-				<img
-					src="/images/Header/bookmark.svg"
-					alt="Кнопка добавить в закладки"
-				>
-			</button>
+			<InCartButton />
+			<BookmarkButton />
 		</div>
 	</div>
 </template>
 
 <script>
+import InCartButton from '../ui-kit/Buttons/InCartButton.vue';
+import BookmarkButton from '../ui-kit/Buttons/BookmarkButton.vue';
+
 export default {
+	components: {
+		InCartButton,
+		BookmarkButton,
+	},
+
 	props: {
 		dailyPromotion: {
 			type: {
@@ -146,40 +144,6 @@ export default {
     margin-top: 7px;
     display: flex;
     column-gap: 10px;
-
-    button {
-      display: flex;
-      align-items: center;
-      column-gap: 11px;
-      border: 1px solid $border-color;
-      border-radius: 5px;
-
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-      }
-
-      @media (max-width: $mobile) {
-        &:first-child {
-          flex-grow: 1;
-          justify-content: center;
-        }
-      }
-    }
-
-    #in-cart {
-      padding: 7px 25px;
-      font-size: 14px;
-      font-weight: 500;
-
-      img {
-        width: 16px;
-        height: 15px;
-      }
-    }
-
-    #in-bookmarks {
-      padding: 11px 15px;
-    }
   }
 }
 </style>

@@ -9,9 +9,9 @@
 </template>
 
 <script>
+import BannerSlider from '../../../composables/useBannerSlider.vue';
 import DailyPromotion from './DailyPromotion.vue';
 import Actions from './Actions.vue';
-import BannerSlider from './BannerSlider.vue';
 
 export default {
 	components: {
